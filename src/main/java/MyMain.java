@@ -8,33 +8,58 @@ public class MyMain {
     // scan.nextDouble() might be useful here
     public static double inputDouble() {
         Scanner scan = new Scanner(System.in);
-        // REPLACE THIS WITH YOUR CODE
+        while (true) {
+            System.out.println("Enter a number between 0.0 and 1000000.0");
+            double x = scan.nextDouble();
+            if (x > 0.0 && x < 1000000.0) {
+                return x;
+            }
+            else {
+            }
 
-        return -1.0;
+        }
     }
 
     // Takes a double money as input and returns the number of quarters that we
     // can return in change
     // You should use a while loop!
     public static int numQuarters(double money) {
-        // REPLACE THIS WITH YOUR CODE
-        return 0;
+        double w = 0;
+        double coins = 0;
+        while (w < money) {
+            w = w + 0.25;
+            coins ++;
+        }
+
+        return (int)coins;
     }
 
     // Takes a double money as input and returns the number of dimes that we
     // can return in change
     // You should use a while loop!
     public static int numDimes(double money) {
-        // REPLACE THIS WITH YOUR CODE
-        return 0;
+        double w = 0;
+        double coins = 0;
+        while (w < money) {
+            w = w + 0.10;
+            coins ++;
+        }
+
+        return (int)coins;
     }
 
     // Takes a double money as input and returns the number of nickels that we
     // can return in change
     // You should use a while loop!
     public static int numNickels(double money) {
-        // REPLACE THIS WITH YOUR CODE
-        return 0;
+        double w = 0;
+        double coins = 0;
+        while (w < money) {
+            w = w + 0.05;
+            coins ++;
+        }
+
+        return (int)coins;
     }
 
     // Takes a double money as input and returns the number of pennies that we
@@ -42,7 +67,14 @@ public class MyMain {
     // You should use a while loop!
     public static int numPennies(double money) {
         // REPLACE THIS WITH YOUR CODE
-        return 0;
+        double w = 0;
+        double coins = 0;
+        while (w < money) {
+            w = w + 0.01;
+            coins ++;
+        }
+
+        return (int)coins;
     }
 
     public static void main(String[] args) {
@@ -50,6 +82,7 @@ public class MyMain {
 
         // You should test inputDouble yourself!
         double d = inputDouble();
+        System.out.println(d);
 
         // Some code to test numQuarters
         System.out.println("\nnumQuarters tests:");
